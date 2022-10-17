@@ -189,27 +189,14 @@ namespace Files.App.ViewModels.SettingsViewModels
 			}
 		}
 
-		public bool OpenFilesWithOneClick
+		public bool OpenItemsWithOneClick
 		{
-			get => UserSettingsService.FoldersSettingsService.OpenFilesWithOneClick;
+			get => UserSettingsService.FoldersSettingsService.OpenItemsWithOneClick;
 			set
 			{
-				if (value != UserSettingsService.FoldersSettingsService.OpenFilesWithOneClick)
+				if (value != UserSettingsService.FoldersSettingsService.OpenItemsWithOneClick)
 				{
-					UserSettingsService.FoldersSettingsService.OpenFilesWithOneClick = value;
-					OnPropertyChanged();
-				}
-			}
-		}
-
-		public bool OpenFoldersWithOneClick
-		{
-			get => UserSettingsService.FoldersSettingsService.OpenFoldersWithOneClick;
-			set
-			{
-				if (value != UserSettingsService.FoldersSettingsService.OpenFoldersWithOneClick)
-				{
-					UserSettingsService.FoldersSettingsService.OpenFoldersWithOneClick = value;
+					UserSettingsService.FoldersSettingsService.OpenItemsWithOneClick = value;
 					OnPropertyChanged();
 				}
 			}
@@ -241,6 +228,18 @@ namespace Files.App.ViewModels.SettingsViewModels
 			}
 		}
 
+		public bool CalculateFolderSizes
+		{
+			get => UserSettingsService.FoldersSettingsService.CalculateFolderSizes;
+			set
+			{
+				if (value != UserSettingsService.FoldersSettingsService.CalculateFolderSizes)
+				{
+					UserSettingsService.FoldersSettingsService.CalculateFolderSizes = value;
+					OnPropertyChanged();
+				}
+			}
+		}
 
 
 		// Local methods
